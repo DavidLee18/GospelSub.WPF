@@ -1,0 +1,30 @@
+﻿<Page x:Class="GospelSub.WPF.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" Loaded="MainPage_Loaded" Height="759.347" Width="405.619">
+    <Grid Height="692" VerticalAlignment="Top" Margin="0,0,4,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="165*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="329*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Startbutton" Content="Start" Margin="163,0,0,34" Click="Startbutton_Click" Height="77" VerticalAlignment="Bottom" Grid.Row="2" 
+                HorizontalAlignment="Left" Width="99"/>
+        <ListBox x:Name="listBox" Margin="10,10,0,0" HorizontalAlignment="Left" Width="385" ItemsSource="{Binding}" Grid.RowSpan="3" Height="534" BorderThickness="2" 
+                 VerticalAlignment="Top" SelectionChanged="ListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding Chosen, Mode=TwoWay}" />
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Margin="67,354,0,0" Grid.Row="2" KeyUp="TextBox_KeyUp"/>
+        <Button x:Name="ButtonUp" Content="Up" HorizontalAlignment="Left" Margin="10,300,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="ButtonUp_Click"/>
+        <Button x:Name="ButtonDown" Content="Down" HorizontalAlignment="Left" Margin="317,300,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="ButtonDown_Click"/>
+    </Grid>
+</Page>

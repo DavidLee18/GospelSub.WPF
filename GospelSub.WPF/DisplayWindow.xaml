@@ -1,0 +1,22 @@
+﻿<Window x:Class="GospelSub.WPF.DisplayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GospelSub.WPF"
+        mc:Ignorable="d"
+        WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize"
+        Title="DisplayWindow" KeyUp="Window_KeyUp" MouseUp="Window_MouseUp">
+    <Viewbox>
+        <StackPanel  Orientation="Vertical" VerticalAlignment="Center">
+            <StackPanel x:Name="linePanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="Beta" Text="Loading" MaxWidth="500" TextAlignment="Center" TextWrapping="WrapWithOverflow" Background="Transparent"/>
+                <TextBlock x:Name="Gamma" Text=" the Gospel..." TextAlignment="Center" TextWrapping="Wrap" Background="Transparent"/>
+            </StackPanel>
+            <TextBlock x:Name="Alpha" Text="잠시만 기다리세요..." TextAlignment="Center" Background="Transparent" VerticalAlignment="Center"/>
+        </StackPanel>
+    </Viewbox>
+    <!--
+    <TextBlock x:Name="textBlock" Text="Loading..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,10,0" TextAlignment="Center" FontSize="170" RenderTransformOrigin="-0.074,0.474" FontFamily="Microsoft Sans Serif"/>
+    -->
+</Window>
